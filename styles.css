@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main Elements */
+body {
+  color: white;
+  background: #0f1a1c;
+  font-family: "Roboto", sans-serif;
+}
+
+header,
+.hero,
+article {
+  padding: 0 1em;
+  background-color: #1c3337;
+}
+
+article {
+  padding: 24px 1em;
+  height: 95vh;
+}
+
+.hero {
+  height: 90vh;
+}
+
+/* Typography */
+h1 {
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 2.75rem;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 1.75rem;
+  line-height: 132%;
+}
+
+p {
+  line-height: 30px;
+  margin-bottom: 32px;
+}
+
+nav {
+  height: 10vh;
+  align-items: center;
+  display: flex;
+}
+
+/* Buttons */
+main button {
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: white;
+  background-color: transparent;
+  padding: 16px 32px;
+  border: 1px solid white;
+  box-sizing: border-box;
+  border-radius: 50px;
+  letter-spacing: 0.08em;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.burger {
+  position: absolute;
+  display: none;
+}
+
+.burger div {
+  transition: all 0.1s ease;
+  margin: 5px 0;
+  background: white;
+  width: 34px;
+  height: 3px;
+}
+
+.logo {
+  letter-spacing: 0.1em;
+  font-family: "Work Sans", sans-serif;
+  text-transform: uppercase;
+  margin-left: auto;
+}
+
+.toggle-nav {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle-nav button,
+.nav-link {
+  cursor: pointer;
+  font-size: 16px;
+  background: none;
+  border: none;
+  color: white;
+  text-decoration: none;
+}
+
+.toggle-nav button:hover,
+.nav-link:hover {
+  color: lightblue;
+}
+
+.projects,
+.contact {
+  position: relative;
+}
+
+.projects ul,
+.contact ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  width: 230px;
+  height: 100px;
+  margin-top: 5px;
+  position: absolute;
+
+  list-style: none;
+  background: #1e3438;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: all 0.4s ease;
+}
+
+.projects a,
+.contact a {
+  text-decoration: none;
+  color: white;
+}
+
+.projects li,
+.contact li {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects li:hover,
+.contact li:hover {
+  background-color: #2b6975;
+}
+
+/* Main content */
+/* hero content */
+.hero-content {
+  margin: auto;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 50vh;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 20vh;
+}
+
+.hero-buttons button {
+  margin-top: 16px;
+}
+
+/* articles */
+/* crime */
+.crime-near-me {
+  margin-top: 24px;
+}
+
+.article-img-main {
+  margin: 24px 0;
+  border-radius: 10px;
+  background-color: grey;
+  height: 320px;
+  width: 100%;
+}
+
+/* Media queries - hamburger */
+@media screen and (max-width: 890px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .burger {
+    cursor: pointer;
+    z-index: 20;
+    display: block;
+  }
+
+  .toggle-nav {
+    box-shadow: 0px 4px 200px rgba(0, 0, 0, 0.3);
+    word-break: break-all;
+    padding: 100px 24px 140px 24px;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #274b51;
+    height: 100vh;
+    width: auto;
+    position: absolute;
+    left: 0px;
+    top: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in;
+  }
+
+  .toggle-nav button a {
+    font-size: 20px;
+  }
+
+  .projects button,
+  .contact button {
+    padding-bottom: 16px;
+    font-weight: bold;
+    color: black;
+    pointer-events: none;
+  }
+
+  .projects ul,
+  .contact ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+
+    width: auto;
+    height: auto;
+    margin-top: 5px;
+    position: relative;
+
+    list-style: none;
+    background: transparent;
+    border-radius: 5px;
+
+    opacity: 1;
+    pointer-events: all;
+    transform: none;
+    transition: none;
+  }
+
+  .projects li,
+  .contact li {
+    padding-bottom: 24px;
+    display: block;
+  }
+
+  .projects li:hover,
+  .contact li:hover {
+    background-color: transparent;
+  }
+}
+
+/* javascript styles  */
+.show {
+  opacity: 1 !important;
+  pointer-events: all !important;
+  transform: translateY(0px) !important;
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+.toggle .line1 {
+  background: white;
+  transform: rotate(-45deg) translate(-5px, 0px);
+}
+.toggle .line2 {
+  background: white;
+  transform: rotate(45deg) translate(-5px, 0px);
+}

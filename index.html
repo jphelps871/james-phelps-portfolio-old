@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Jamie's Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div onclick="navSlide()" class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+        </div>
+
+        <div class="toggle-nav">
+          <button><a href="#" class="nav-link active">Portfolio</a></button>
+          <button><a href="#" class="nav-link">About Me</a></button>
+          <div class="projects">
+            <button class="dropbtn" onclick="myFunction()">Projects</button>
+            <ul id="myDropdown" class="dropdown-content">
+              <li><a href="#">Crime data app</a></li>
+              <li><a href="#">UI Design</a></li>
+              <li><a href="#">Prograaming languages</a></li>
+            </ul>
+          </div>
+          <div class="contact">
+            <button>Contact</button>
+            <ul>
+              <li><a href="">https://github.com/jphelps871</a></li>
+              <li><a href="">07432242657</a></li>
+              <li><a href="">James.phelps1995@live.com</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="logo">J.Phelps</div>
+      </nav>
+    </header>
+    <main>
+      <div class="hero">
+        <section class="hero-content">
+          <h1>
+            Front end web developer. user experience and interface designer.
+            with degree and masters.
+          </h1>
+        </section>
+        <section class="hero-buttons">
+          <button href="#">See Projects</button>
+          <button href="#">Git Hub</button>
+        </section>
+      </div>
+
+      <article class="crime-near-me">
+        <h2>Crime Near Me</h2>
+        <img
+          class="article-img-main"
+          src="/assets/article-img/crime-img.png"
+          alt=""
+        />
+        <p>
+          Project involving React, node and external api’s such as Map Box to
+          find and present crime data from a users input. Allows users to login,
+          save and delete data, using mongodb database
+        </p>
+        <button>See More</button>
+      </article>
+    </main>
+    <script src="javascript/script.js"></script>
+  </body>
+</html>
