@@ -5,22 +5,26 @@
 }
 
 /* Main Elements */
+html {
+  font-size: 16px;
+}
+
 body {
   color: white;
   background: #0f1a1c;
   font-family: "Roboto", sans-serif;
 }
 
-header,
-.hero,
-article {
-  padding: 0 1em;
-  background-color: #1c3337;
+nav {
+  height: 10vh;
+  align-items: center;
+  display: flex;
 }
 
-article {
-  padding: 24px 1em;
-  height: 95vh;
+header,
+.hero {
+  padding: 0 1em;
+  background-color: #1c3337;
 }
 
 .hero {
@@ -43,12 +47,6 @@ h2 {
 p {
   line-height: 30px;
   margin-bottom: 32px;
-}
-
-nav {
-  height: 10vh;
-  align-items: center;
-  display: flex;
 }
 
 /* Buttons */
@@ -179,17 +177,36 @@ main button {
 }
 
 /* articles */
-/* crime */
-.crime-near-me {
-  margin-top: 24px;
+.portfolio-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 24px;
+  margin: 16px;
+}
+
+.cards {
+  padding: 48px 16px;
+  background-color: #1c3337;
+  border-radius: 10px;
+  /* margin: 24px 24px 0 24px; */
 }
 
 .article-img-main {
   margin: 24px 0;
   border-radius: 10px;
   background-color: grey;
-  height: 320px;
-  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.tech-icons {
+  width: 80%;
+  margin-bottom: 32px;
+}
+
+.tech-icons img {
+  height: 1.5rem;
+  margin-right: 16px;
 }
 
 /* Media queries - hamburger */
@@ -205,7 +222,7 @@ main button {
   }
 
   .toggle-nav {
-    box-shadow: 0px 4px 200px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0px 4px 200px rgba(0, 0, 0, 0.5); */
     word-break: break-all;
     padding: 100px 24px 140px 24px;
     align-items: flex-start;
