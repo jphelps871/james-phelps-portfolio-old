@@ -15,10 +15,20 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+header {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  position: fixed;
+}
+
 nav {
   height: 10vh;
   align-items: center;
   display: flex;
+}
+
+main {
+  padding-top: 10vh;
 }
 
 header,
@@ -45,7 +55,7 @@ h2 {
 }
 
 h3 {
-  margin: 32px 0 16px;
+  margin: 3rem 0 1rem;
   font-weight: bold;
   font-size: 18px;
   line-height: 21px;
@@ -58,23 +68,43 @@ a {
 
 p {
   line-height: 30px;
-  margin-bottom: 32px;
+  margin-bottom: 2em;
 }
 
 /* Buttons */
 main button {
+  padding: 0;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 0.875rem;
   text-transform: uppercase;
   color: white;
   background-color: transparent;
-  padding: 16px 32px;
   border: 1px solid white;
   box-sizing: border-box;
   border-radius: 50px;
   letter-spacing: 0.08em;
 }
 
+.hero-buttons button,
+main button {
+  cursor: pointer;
+}
+
+.hero-buttons button a,
+main button a {
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 1rem 3rem;
+  display: inline-block;
+}
+
+.hero-buttons button a:hover,
+main button a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* navigation */
 .active {
   font-weight: bold;
 }
@@ -99,6 +129,11 @@ main button {
   margin-left: auto;
 }
 
+.logo a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .toggle-nav {
   width: 35%;
   display: flex;
@@ -109,7 +144,7 @@ main button {
 .toggle-nav button,
 .nav-link {
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1rem;
   background: none;
   border: none;
   color: white;
@@ -185,25 +220,26 @@ main button {
 }
 
 .hero-buttons button {
-  margin-top: 16px;
+  margin-top: 1rem;
 }
 
 /* articles */
+/* home */
 .portfolio-cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 24px;
-  margin: 16px;
+  grid-gap: 16px;
+  margin: 1rem;
 }
 
 .cards {
-  padding: 48px 16px;
+  padding: 3rem 1rem;
   background-color: #1c3337;
   border-radius: 10px;
 }
 
 .card-img {
-  margin: 24px 0;
+  margin: 1.5rem 0;
   border-radius: 10px;
   background-color: darkgrey;
   height: auto;
@@ -212,12 +248,12 @@ main button {
 
 .tech-icons {
   width: 80%;
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
 }
 
 .tech-icons img {
-  height: 1.5rem;
-  margin-right: 16px;
+  height: 1.5em;
+  margin-right: 1em;
 }
 
 .Certification-carosal {
@@ -234,7 +270,7 @@ main button {
 }
 
 .certificate {
-  margin-right: 16px;
+  margin-right: 1rem;
   width: auto;
   height: 140px;
 }
@@ -242,6 +278,26 @@ main button {
 .profiles a {
   display: block;
   padding-bottom: 0.4em;
+}
+
+/* articles */
+/* crime-near-me */
+.container {
+  background-color: #1c3337;
+}
+
+.portfolio-information-container {
+  margin: auto;
+  max-width: 900px;
+  padding: 5vh 1em 2em 1em;
+  background-color: #1c3337;
+}
+
+.img-flex {
+  display: grid;
+  column-gap: 24px;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 /* Media queries - hamburger */
@@ -257,7 +313,6 @@ main button {
   }
 
   .toggle-nav {
-    /* box-shadow: 0px 4px 200px rgba(0, 0, 0, 0.5); */
     word-break: break-all;
     padding: 100px 24px 140px 24px;
     align-items: flex-start;
@@ -275,12 +330,12 @@ main button {
   }
 
   .toggle-nav button a {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
   .projects button,
   .contact button {
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
     font-weight: bold;
     color: black;
     pointer-events: none;
@@ -294,7 +349,7 @@ main button {
 
     width: auto;
     height: auto;
-    margin-top: 5px;
+    margin-top: 0.3125em;
     position: relative;
 
     list-style: none;
@@ -309,7 +364,7 @@ main button {
 
   .projects li,
   .contact li {
-    padding-bottom: 24px;
+    padding-bottom: 1.5em;
     display: block;
   }
 

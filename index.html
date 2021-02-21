@@ -20,17 +20,20 @@
     <header>
       <nav>
         <div onclick="navSlide()" class="burger">
+          <!-- hamburger image -->
           <div class="line1"></div>
           <div class="line2"></div>
         </div>
 
         <div class="toggle-nav">
-          <button><a href="#" class="nav-link active">Portfolio</a></button>
+          <button>
+            <a href="/" class="nav-link active">Portfolio</a>
+          </button>
           <button><a href="#" class="nav-link">About Me</a></button>
           <div class="projects">
             <button class="dropbtn" onclick="myFunction()">Projects</button>
             <ul id="myDropdown" class="dropdown-content">
-              <li><a href="#">Crime data app</a></li>
+              <li><a href="/crime-near-me.html">Crime data app</a></li>
               <li><a href="#">UI Design</a></li>
               <li><a href="#">Programing languages</a></li>
             </ul>
@@ -45,7 +48,7 @@
           </div>
         </div>
 
-        <div class="logo">J.Phelps</div>
+        <div class="logo"><a href="/">J.Phelps</a></div>
       </nav>
     </header>
     <main>
@@ -57,18 +60,20 @@
           </h1>
         </section>
         <section class="hero-buttons">
-          <button href="#">See Projects</button>
-          <button href="#">Git Hub</button>
+          <button><a href="#seeProjects">See Projects</a></button>
+          <button>
+            <a href="https://github.com/jphelps871" target="_blank">Git Hub</a>
+          </button>
         </section>
       </div>
 
-      <article class="portfolio-cards-container">
+      <article id="seeProjects" class="portfolio-cards-container">
         <article class="cards">
           <h2>Crime Near Me</h2>
           <img
             class="card-img"
             src="/assets/article-img/crime-img.png"
-            alt=""
+            alt="crime near me website home page"
           />
           <p>
             Project involving React, node and external api’s such as Map Box to
@@ -82,7 +87,7 @@
             <img src="assets/icons/react-icon.svg" alt="" />
             <img src="assets/icons/node-icon.svg" alt="" />
           </div>
-          <button>See More</button>
+          <button><a href="crime-near-me.html">See More</a></button>
         </article>
         <article class="cards">
           <h2>Design with Figma and Zeplin</h2>
@@ -100,7 +105,7 @@
             <img src="assets/icons/figma-icon.svg" alt="" />
             <img src="assets/icons/zeplin-icon.svg" alt="" />
           </div>
-          <button>See Designs</button>
+          <button><a href="#">See Designs</a></button>
         </article>
         <article class="cards">
           <h2>Demonstration of Languages</h2>
