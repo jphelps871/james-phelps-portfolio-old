@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>Jamie's Portfolio</title>
+	</head>
+	<body>
+		<header>
+			<nav class="maximum-width">
+				<div onclick="navSlide()" class="burger">
+					<!-- hamburger image -->
+					<div class="line1"></div>
+					<div class="line2"></div>
+				</div>
+
+				<div class="toggle-nav">
+					<button>
+						<a href="index.html" class="nav-link">Portfolio</a>
+					</button>
+					<button><a href="./about-me.html" class="nav-link active">About Me</a></button>
+					<div class="projects">
+						<button class="dropbtn" onmouseover="displayProjects()">Projects</button>
+						<ul id="projectsDropdown" class="dropdown-content">
+							<li><a href="./gazetteer.html">Gazetteer</a></li>
+							<li><a href="./ecommerce.html">Coffee Eccomerce</a></li>
+							<li><a href="./my-reddit.html">My Reddit</a></li>
+							<li><a href="./crime-near-me.html">Crime Near Me</a></li>
+						</ul>
+					</div>
+					<div class="contact">
+						<button class="dropbtn" onmouseover="displayContacts()">Contact</button>
+						<ul id="contactsDropdown" class="dropdown-content">
+							<li><a href="tel:07432242657">07432242657</a></li>
+							<li>
+								<a href="mailto:James.phelps1995@live.com">James.phelps1995@live.com</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="logo"><a href="index.html">J.Phelps</a></div>
+			</nav>
+		</header>
+	</body>
+	<main>
+		<div class="hero">
+			<section class="hero-content">
+				<h1>About me.</h1>
+				<p>
+					My name is James Phelps and I want to first thank you for having a look at my portfolio. I
+					got into web development when I was 14, of course I did not quite understand what web
+					development was or what I was even doing. I created obscure websites with my dad, mostly
+					about space and our thoughts on the future of space. However, as things go I stopped and
+					completely forgot the fun I had.
+				</p>
+				<p>
+					Fast forward to my Masters, where we were given the opportunuty to learn Python and my
+					passion for web development took off. Since then and into the days of Covid, I have not
+					stopped creating, designing and developing all things related to coding and web
+					development.
+				</p>
+				<p>
+					From learning on Codecademy and Treehouse to creating websites for clients, tacking
+					questions on Codewars and developing immersive projects. All of which has led me to become
+					a thoughtful, unique programmer with a passion in Front-end web developemnt.
+				</p>
+			</section>
+		</div>
+	</main>
+	<script src="javascript/script.js"></script>
+</html>

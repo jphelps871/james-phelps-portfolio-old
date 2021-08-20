@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>Jamie's Portfolio</title>
+	</head>
+	<body>
+		<header>
+			<nav class="maximum-width">
+				<div onclick="navSlide()" class="burger">
+					<!-- hamburger image -->
+					<div class="line1"></div>
+					<div class="line2"></div>
+				</div>
+
+				<div class="toggle-nav">
+					<button>
+						<a href="index.html" class="nav-link active">Portfolio</a>
+					</button>
+					<button><a href="./about-me.html" class="nav-link">About Me</a></button>
+					<div class="projects">
+						<button class="dropbtn" onmouseover="displayProjects()">Projects</button>
+						<ul id="projectsDropdown" class="dropdown-content">
+							<li><a href="./gazetteer.html">Gazetteer</a></li>
+							<li><a href="./ecommerce.html">Coffee Eccomerce</a></li>
+							<li><a href="./my-reddit.html">My Reddit</a></li>
+							<li><a href="./crime-near-me.html">Crime Near Me</a></li>
+						</ul>
+					</div>
+					<div class="contact">
+						<button class="dropbtn" onmouseover="displayContacts()">Contact</button>
+						<ul id="contactsDropdown" class="dropdown-content">
+							<li><a href="tel:07432242657">07432242657</a></li>
+							<li>
+								<a href="mailto:James.phelps1995@live.com">James.phelps1995@live.com</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="logo"><a href="index.html">J.Phelps</a></div>
+			</nav>
+		</header>
+		<main>
+			<div class="container">
+				<article class="portfolio-information-container">
+					<h2>My Reddit</h2>
+					<section>
+						<p>
+							The aim for the project was to use React to make a simple but affective reddit copy.
+							Throughout the design process it became apparent that a focus on responsiveness and
+							transferring state around the app was integral to improving the user experience,
+							compared to the official Reddit website. Below is an example of the responsiveness.
+						</p>
+						<video controls autoplay>
+							<source src="./assets/video/reddit-responsive-design.mp4" type="video/mp4" />
+							Your browser does not support this video
+						</video>
+						<p>
+							The app leans heavily on the use of states in React. For example, when a user searches
+							the app, the text is quickly transferred around the app. This was where the challenged
+							lied, balancing states and Lifecyle events without slowing the user down.
+						</p>
+						<video controls autoplay>
+							<source src="./assets/video/reddit-search.mp4" type="video/mp4" />
+							Your browser does not support this video
+						</video>
+						<p>
+							As you can see, the design is very minimal, delivering only what the user really wants
+							to see.
+						</p>
+					</section>
+				</article>
+			</div>
+		</main>
+		<script src="javascript/script.js"></script>
+	</body>
+</html>

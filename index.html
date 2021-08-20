@@ -1,154 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Jamie's Portfolio</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div onclick="navSlide()" class="burger">
-          <!-- hamburger image -->
-          <div class="line1"></div>
-          <div class="line2"></div>
-        </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>Jamie's Portfolio</title>
+	</head>
+	<body>
+		<header>
+			<nav class="maximum-width">
+				<div onclick="navSlide()" class="burger">
+					<!-- hamburger image -->
+					<div class="line1"></div>
+					<div class="line2"></div>
+				</div>
 
-        <div class="toggle-nav">
-          <button>
-            <a href="index.html" class="nav-link active">Portfolio</a>
-          </button>
-          <button><a href="#" class="nav-link">About Me</a></button>
-          <div class="projects">
-            <button class="dropbtn" onclick="myFunction()">Projects</button>
-            <ul id="myDropdown" class="dropdown-content">
-              <li><a href="crime-near-me.html">Crime data app</a></li>
-              <li><a href="#">UI Design</a></li>
-              <li><a href="#">Programing languages</a></li>
-            </ul>
-          </div>
-          <div class="contact">
-            <button>Contact</button>
-            <ul>
-              <li><a href="https://github.com/jphelps871">My GitHub</a></li>
-              <li><a href="tel:07432242657">07432242657</a></li>
-              <li>
-                <a href="mailto:James.phelps1995@live.com"
-                  >James.phelps1995@live.com</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
+				<div class="toggle-nav">
+					<button>
+						<a href="index.html" class="nav-link active">Portfolio</a>
+					</button>
+					<button><a href="./about-me.html" class="nav-link">About Me</a></button>
+					<div class="projects">
+						<button class="dropbtn" onmouseover="displayProjects()">Projects</button>
+						<ul id="projectsDropdown" class="dropdown-content">
+							<li><a href="./gazetteer.html">Gazetteer</a></li>
+							<li><a href="./ecommerce.html">Coffee Eccomerce</a></li>
+							<li><a href="./my-reddit.html">My Reddit</a></li>
+							<li><a href="./crime-near-me.html">Crime Near Me</a></li>
+						</ul>
+					</div>
+					<div class="contact">
+						<button class="dropbtn" onmouseover="displayContacts()">Contact</button>
+						<ul id="contactsDropdown" class="dropdown-content">
+							<li><a href="tel:07432242657">07432242657</a></li>
+							<li>
+								<a href="mailto:James.phelps1995@live.com">James.phelps1995@live.com</a>
+							</li>
+						</ul>
+					</div>
+				</div>
 
-        <div class="logo"><a href="index.html">J.Phelps</a></div>
-      </nav>
-    </header>
-    <main>
-      <div class="hero">
-        <section class="hero-content">
-          <h1>
-            Front end web developer. user experience and interface designer.
-            with degree and masters.
-          </h1>
-        </section>
-        <section class="hero-buttons">
-          <button><a href="#seeProjects">See Projects</a></button>
-          <button>
-            <a href="https://github.com/jphelps871" target="_blank">Git Hub</a>
-          </button>
-        </section>
-      </div>
+				<div class="logo"><a href="index.html">J.Phelps</a></div>
+			</nav>
+		</header>
+		<main>
+			<div class="hero">
+				<section class="hero-content">
+					<h1>
+						Front end web developer. user experience and interface designer. with degree and
+						masters.
+					</h1>
+					<p>
+						Ambitious self-taught Front-end engineer, keen to embrace new and emerging technologies
+						whilst delivering clean, readable code. A year of experience as a freelance web
+						developer, liaising with clients to produce innovative solutions for a variety of
+						issues. Both a degree and masters that led to my desire to write code, now undertaking a
+						course with IT Career Switch.
+					</p>
+				</section>
+				<section class="hero-buttons">
+					<button><a href="#seeProjects">See Projects</a></button>
+					<button>
+						<a href="https://github.com/jphelps871" target="_blank">Git Hub</a>
+					</button>
+				</section>
+			</div>
 
-      <article id="seeProjects" class="portfolio-cards-container">
-        <article class="cards">
-          <h2>Crime Near Me</h2>
-          <img
-            class="card-img"
-            src="/assets/article-img/crime-img.png"
-            alt="crime near me website home page"
-          />
-          <p>
-            Project involving React, node and external api’s such as Map Box to
-            find and present crime data from a users input. Allows users to
-            login, save and delete data, using mongodb database
-          </p>
-          <div class="tech-icons">
-            <img src="assets/icons/html-icon.svg" />
-            <img src="assets/icons/css-icon.svg" />
-            <img src="assets/icons/javas-icon.svg" />
-            <img src="assets/icons/react-icon.svg" />
-            <img src="assets/icons/node-icon.svg" />
-          </div>
-          <button><a href="crime-near-me.html">See More</a></button>
-        </article>
-        <article class="cards">
-          <h2>Design with Figma and Zeplin</h2>
-          <img
-            class="card-img"
-            src="/assets/article-img/bentleys-img.png"
-            alt=""
-          />
-          <p>
-            Most web design I have devloped began with figma, and helped be
-            executed through Zeplin. Click the link to see work for clients,
-            these include: ‘Lindseys Beauty Salon’ and ‘Bentleys Dog Grooming’.
-          </p>
-          <div class="tech-icons">
-            <img src="assets/icons/figma-icon.svg" />
-            <img src="assets/icons/zeplin-icon.svg" />
-          </div>
-          <button><a href="#">See Designs</a></button>
-        </article>
-        <article class="cards">
-          <h2>Demonstration of Languages</h2>
-          <h3>Certifications</h3>
-          <div class="Certification-carosal">
-            <div class="certificate">
-              <img src="assets/javascript-cert.jpg" alt="" />
-            </div>
-            <div class="certificate">
-              <img src="assets/javascript-cert.jpg" alt="" />
-            </div>
-            <div class="certificate">
-              <img src="assets/javascript-cert.jpg" alt="" />
-            </div>
-          </div>
-          <h3>Codewars</h3>
-          <p>
-            Currently <span style="color: #f0c638">5kyu</span> level in
-            codewars. Please visit my codewars jphelps871 account for examples
-            of coding challanges.
-          </p>
-          <h3>Courses</h3>
-          <p>Click on the links bellow to see my profiles:</p>
-          <section class="profiles">
-            <a href="https://teamtreehouse.com/jamesphelps2" target="_black"
-              >Team TreeHouse</a
-            >
-            <a
-              href="https://www.codecademy.com/profiles/chip7941432382"
-              target="_black"
-              >Codecademy</a
-            >
-            <a href="https://www.freecodecamp.org/2ames_phelps" target="_black"
-              >CodeCamp</a
-            >
-          </section>
-        </article>
-      </article>
-    </main>
-    <script src="javascript/script.js"></script>
-  </body>
+			<article id="seeProjects" class="portfolio-cards-container maximum-width">
+				<article class="cards">
+					<h2>Gazetteer</h2>
+					<img
+						class="card-img"
+						src="./assets/article-img/gazatteer-home.jpg"
+						alt="crime near me website home page"
+					/>
+					<p>
+						Website which takes an array of data from multiple API's, handling any errors and
+						displaying correct data to a map through the use of Leaflet.js.
+					</p>
+					<p>
+						Uses the Bootstrap framework for styling and certain Leaflet.js pluggins to create a
+						modern and easy to use map.
+					</p>
+					<div class="tech-icons">
+						<img src="assets/icons/html-icon.svg" />
+						<img src="assets/icons/css-icon.svg" />
+						<img src="assets/icons/javas-icon.svg" />
+						<img src="https://www.php.net/images/logos/new-php-logo.svg" />
+					</div>
+					<button><a href="./gazetteer.html">See More</a></button>
+				</article>
+
+				<article class="cards">
+					<h2>Coffee Ecommerce</h2>
+					<img
+						class="card-img"
+						src="./assets/article-img/coffee-eccomerce-home.jpg"
+						alt="crime near me website home page"
+					/>
+					<p>
+						An eccomerce website which allows a user to login and add or remove items within their
+						shopping cart. All shopping items are collecetd from a database, first designed and
+						created using Postgres. The site also uses Heroku for hosting.
+					</p>
+					<div class="tech-icons">
+						<img src="assets/icons/html-icon.svg" />
+						<img src="assets/icons/css-icon.svg" />
+						<img src="assets/icons/javas-icon.svg" />
+						<img src="assets/icons/node-icon.svg" />
+						<img src="assets/icons/react-icon.svg" />
+						<img src="./assets/icons/redux.svg" />
+						<img
+							src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg"
+						/>
+					</div>
+					<button><a href="ecommerce.html">See More</a></button>
+				</article>
+
+				<article class="cards">
+					<h2>My Reddit</h2>
+					<img class="card-img" src="./assets/article-img/my-reddit-app.jpg" alt="Reddit app" />
+					<p>
+						Using Reddit's open source API I recreated the app to look and feel more modern. The app
+						uses React to display and proccess data from the API, whilst incorporating features such
+						as handling state and lifesycle events.
+					</p>
+					<div class="tech-icons">
+						<img src="assets/icons/html-icon.svg" />
+						<img src="assets/icons/css-icon.svg" />
+						<img src="assets/icons/javas-icon.svg" />
+						<img src="assets/icons/react-icon.svg" />
+					</div>
+					<button><a href="./my-reddit.html">See More</a></button>
+				</article>
+
+				<article class="cards">
+					<h2>Crime Near Me</h2>
+					<img
+						class="card-img"
+						src="./assets/article-img/crime-img.png"
+						alt="crime near me website home page"
+					/>
+					<p>
+						Project involving React, node and external api’s such as Map Box to find and present
+						crime data from a users input. Allows users to login, save and delete data, using
+						mongodb database
+					</p>
+					<div class="tech-icons">
+						<img src="assets/icons/html-icon.svg" />
+						<img src="assets/icons/css-icon.svg" />
+						<img src="assets/icons/javas-icon.svg" />
+						<img src="assets/icons/react-icon.svg" />
+						<img src="assets/icons/node-icon.svg" />
+					</div>
+					<button><a href="crime-near-me.html">See More</a></button>
+				</article>
+
+				<article class="cards">
+					<h2>Design with Figma and Zeplin</h2>
+					<img class="card-img" src="/assets/article-img/bentleys-img.png" alt="" />
+					<p>
+						Most web design I have devloped began with figma, and helped be executed through Zeplin.
+						Click the link to see an example from one of my clients web site.
+					</p>
+					<div class="tech-icons">
+						<img src="assets/icons/figma-icon.svg" />
+						<img src="assets/icons/zeplin-icon.svg" />
+					</div>
+					<button>
+						<a href="https://www.figma.com/file/9SmQ1sTQsIgaCR2gDjVzKi/Bentleys-Dog-Grooming"
+							>See Example file</a
+						>
+					</button>
+				</article>
+
+				<article class="cards career-switch">
+					<h2>IT Career Switch Projects</h2>
+					<p>
+						A list of projects involving a range of skills such as Javascript, PHP, React and Node.
+					</p>
+					<button><a href="./gazetteer/">Gazatteer</a></button>
+					<button><a href="#">Project 2</a></button>
+				</article>
+			</article>
+		</main>
+		<script src="javascript/script.js"></script>
+	</body>
 </html>

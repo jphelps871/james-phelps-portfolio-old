@@ -1,6 +1,10 @@
 // Navigation, dropdown
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
+function displayProjects() {
+  document.getElementById("projectsDropdown").classList.toggle("show");
+}
+
+function displayContacts() {
+  document.getElementById("contactsDropdown").classList.toggle("show");
 }
 
 window.onclick = function (event) {
@@ -27,4 +31,3 @@ const navSlide = () => {
   // burger animation
   burger.classList.toggle("toggle");
 };
-// navSlide();

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>Jamie's Portfolio</title>
+	</head>
+	<body>
+		<header>
+			<nav class="maximum-width">
+				<div onclick="navSlide()" class="burger">
+					<!-- hamburger image -->
+					<div class="line1"></div>
+					<div class="line2"></div>
+				</div>
+
+				<div class="toggle-nav">
+					<button>
+						<a href="index.html" class="nav-link active">Portfolio</a>
+					</button>
+					<button><a href="./about-me.html" class="nav-link">About Me</a></button>
+					<div class="projects">
+						<button class="dropbtn" onmouseover="displayProjects()">Projects</button>
+						<ul id="projectsDropdown" class="dropdown-content">
+							<li><a href="./gazetteer.html">Gazetteer</a></li>
+							<li><a href="./ecommerce.html">Coffee Eccomerce</a></li>
+							<li><a href="./my-reddit.html">My Reddit</a></li>
+							<li><a href="./crime-near-me.html">Crime Near Me</a></li>
+						</ul>
+					</div>
+					<div class="contact">
+						<button class="dropbtn" onmouseover="displayContacts()">Contact</button>
+						<ul id="contactsDropdown" class="dropdown-content">
+							<li><a href="tel:07432242657">07432242657</a></li>
+							<li>
+								<a href="mailto:James.phelps1995@live.com">James.phelps1995@live.com</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="logo"><a href="index.html">J.Phelps</a></div>
+			</nav>
+		</header>
+		<main>
+			<div class="container">
+				<article class="portfolio-information-container">
+					<h2>Gazatteer</h2>
+					<section>
+						<p>
+							Given a brief to develop a gazetteer, a map that displays information on countries and
+							points of interest, I was able to design and develop a great user experience for
+							exploring multiple countries from around the world. The design aimed to present
+							information to the user with as little interactions as possible, by incorporating
+							API’s such as geolocation and developing preloaders. The real learning curve for
+							myself was juggling multiple API’s from sources such as RapidAPI, and trudging through
+							multiple documentations that relate to something found in a Gazetteer. After
+							collecting all relevant data, it was important to handle all possible errors and
+							display the correct information.
+						</p>
+						<p>
+							Below is an example of what a user will first see when reaching the website, a simple
+							preloader that when also displays how the website works.
+						</p>
+						<img class="article-img" src="./assets/article-img/preloader-gazetteer.jpg" alt="" />
+						<p>
+							When first developed, many users were struggling with the overall functionality of the
+							website. Working within an agile environment the design was adapted multiple times
+							that created a better user experience. As you can see, the first image (design one)
+							appears less rounded with more clutter whereas, the second image (design two) is
+							clearer and shows more of the map.
+						</p>
+						<img class="article-img" src="./assets/article-img/gazetteer-first-design.jpg" alt="" />
+						<img class="article-img" src="./assets/article-img/gazetteer-final-design.jpg" alt="" />
+						<p>
+							Thank you for having a read, please feel free to visit the website and explore the
+							world!
+						</p>
+					</section>
+				</article>
+			</div>
+		</main>
+		<script src="javascript/script.js"></script>
+	</body>
+</html>
