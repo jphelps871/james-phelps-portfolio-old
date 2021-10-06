@@ -30,6 +30,7 @@
 					<div class="projects">
 						<button class="dropbtn" onclick="displayProjects()">Projects</button>
 						<ul id="projectsDropdown" class="dropdown-content">
+							<li><a href="./company-directory.html">Company Directory</a></li>
 							<li><a href="./gazetteer.html">Gazetteer</a></li>
 							<li><a href="./ecommerce.html">Coffee Eccomerce</a></li>
 							<li><a href="./my-reddit.html">My Reddit</a></li>
@@ -39,10 +40,8 @@
 					<div class="contact">
 						<button class="dropbtn" onclick="displayContacts()">Contact</button>
 						<ul id="contactsDropdown" class="dropdown-content">
-							<li><a href="tel:07432242657">07432242657</a></li>
-							<li>
-								<a href="mailto:James.phelps1995@live.com">James.phelps1995@live.com</a>
-							</li>
+							<li><a class="copy-mobile">Click to copy mobile</a></li>
+							<li><a class="copy-email">Click to copy email</a></li>
 						</ul>
 					</div>
 				</div>
@@ -75,11 +74,33 @@
 
 			<article id="seeProjects" class="portfolio-cards-container maximum-width">
 				<article class="cards">
+					<h2>Company Directory</h2>
+					<img
+						class="card-img"
+						src="./assets/article-img/company-directory-home.jpg"
+						alt="Company Directory home page"
+					/>
+					<p>
+						Mimic a companies directory whereby the user manipulates data from the database. This
+						includes inserting, updating, deleting and selecting data. The website incorpoartes
+						validation both client and server-side.
+					</p>
+					<div class="tech-icons">
+						<img src="assets/icons/html-icon.svg" />
+						<img src="assets/icons/css-icon.svg" />
+						<img src="assets/icons/javas-icon.svg" />
+						<img src="https://www.php.net/images/logos/new-php-logo.svg" />
+						<img src="https://www.vectorlogo.zone/logos/jquery/jquery-ar21.svg" />
+					</div>
+					<button><a href="./company-directory.html">See More</a></button>
+				</article>
+
+				<article class="cards">
 					<h2>Gazetteer</h2>
 					<img
 						class="card-img"
 						src="./assets/article-img/gazatteer-home.jpg"
-						alt="crime near me website home page"
+						alt="Gazetteer home page"
 					/>
 					<p>
 						Website which takes an array of data from multiple API's, handling any errors and
@@ -103,7 +124,7 @@
 					<img
 						class="card-img"
 						src="./assets/article-img/coffee-eccomerce-home.jpg"
-						alt="crime near me website home page"
+						alt="Coffee Ecommerce home page"
 					/>
 					<p>
 						An eccomerce website which allows a user to login and add or remove items within their
@@ -126,7 +147,11 @@
 
 				<article class="cards">
 					<h2>My Reddit</h2>
-					<img class="card-img" src="./assets/article-img/my-reddit-app.jpg" alt="Reddit app" />
+					<img
+						class="card-img"
+						src="./assets/article-img/my-reddit-app.jpg"
+						alt="My Reddit home page"
+					/>
 					<p>
 						Using Reddit's open source API I recreated the app to look and feel more modern. The app
 						uses React to display and proccess data from the API, whilst incorporating features such
@@ -165,14 +190,13 @@
 
 				<article class="cards">
 					<h2>Design with Figma and Zeplin</h2>
-					<img class="card-img" src="./assets/article-img/bentleys-img.png" alt="" />
+					<img class="card-img" src="./assets/article-img/bentleys-img.png" alt="Figma design" />
 					<p>
 						Most web design I have devloped began with figma, and helped be executed through Zeplin.
 						Click the link to see an example from one of my clients web site.
 					</p>
 					<div class="tech-icons">
 						<img src="assets/icons/figma-icon.svg" />
-						<img src="assets/icons/zeplin-icon.svg" />
 					</div>
 					<button>
 						<a href="https://www.figma.com/file/9SmQ1sTQsIgaCR2gDjVzKi/Bentleys-Dog-Grooming"

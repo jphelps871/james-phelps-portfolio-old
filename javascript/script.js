@@ -1,5 +1,6 @@
 const projectsDropDown = document.getElementById("projectsDropdown");
 const contactsDropDown = document.getElementById("contactsDropdown");
+const contact = document.querySelector(".contact");
 
 // Navigation, dropdown
 function displayProjects() {
@@ -36,3 +37,26 @@ const navSlide = () => {
   // burger animation
   burger.classList.toggle("toggle");
 };
+
+// Copy either email or mobile
+contact.addEventListener("click", function({target}) {
+  if (target.nodeName !== 'A') return;
+
+  let copiedText;
+  
+  if (target.innerText === 'Email') {
+    copiedText =  navigator.clipboard.writeText('james.phelps1995@live.com');
+  } else {
+    copiedText =  navigator.clipboard.writeText('07432242657');
+  }
+
+  copiedText.then( function() {
+      alert("Copied");
+    }, function(error) {
+      alert("Unable to copy");
+
+      document.querySelector('.copy-email').innerText = "james.phelps1995@live.com";
+      document.querySelector('.copy-mobile').innerText = "07432252647";
+
+    })
+})
