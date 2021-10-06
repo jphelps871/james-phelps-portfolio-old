@@ -1,21 +1,26 @@
+const projectsDropDown = document.getElementById("projectsDropdown");
+const contactsDropDown = document.getElementById("contactsDropdown");
+
 // Navigation, dropdown
 function displayProjects() {
-  document.getElementById("projectsDropdown").classList.toggle("show");
+  projectsDropDown.classList.toggle("show");
+  contactsDropDown.classList.remove("show");
 }
 
 function displayContacts() {
-  document.getElementById("contactsDropdown").classList.toggle("show");
+  contactsDropDown.classList.toggle("show");
+  projectsDropDown.classList.remove("show");
 }
 
 window.onclick = function (event) {
-  if (!event.target.matches(".dropbtn")) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains("show")) {
-        openDropdown.classList.remove("show");
-      }
+  if (event.target.matches(".dropbtn")) return;
+
+  const dropdowns = document.getElementsByClassName("dropdown-content");
+
+  for (let i = 0; i < dropdowns.length; i++) {
+    const openDropdown = dropdowns[i];
+    if (openDropdown.classList.contains("show")) {
+      openDropdown.classList.remove("show");
     }
   }
 };

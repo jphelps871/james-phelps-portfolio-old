@@ -1,3 +1,8 @@
+/* CSS function */
+:root {
+	--header-height: 80px;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -22,7 +27,7 @@ header {
 }
 
 nav {
-	height: 100px;
+	height: var(--header-height);
 	align-items: center;
 	display: flex;
 	margin: auto;
@@ -32,8 +37,10 @@ main {
 	padding-top: 100px;
 }
 
-video {
+video,
+iframe {
 	width: 100%;
+	min-height: 440px;
 	border-radius: 5px;
 	margin-bottom: 2rem;
 }
@@ -53,6 +60,7 @@ h1 {
 }
 
 h2 {
+	margin-bottom: 1rem;
 	font-weight: normal;
 	font-size: 1.75rem;
 	line-height: 132%;
@@ -237,7 +245,8 @@ main button a:hover {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	grid-gap: 16px;
-	margin: 1rem auto 1rem auto;
+	margin: calc(var(--header-height) * -1) auto 1rem auto;
+	padding-top: var(--header-height);
 }
 
 .cards {

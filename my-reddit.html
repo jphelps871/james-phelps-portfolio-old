@@ -24,11 +24,11 @@
 
 				<div class="toggle-nav">
 					<button>
-						<a href="index.html" class="nav-link active">Portfolio</a>
+						<a href="index.html" class="nav-link">Portfolio</a>
 					</button>
 					<button><a href="./about-me.html" class="nav-link">About Me</a></button>
 					<div class="projects">
-						<button class="dropbtn" onmouseover="displayProjects()">Projects</button>
+						<button class="dropbtn active" onclick="displayProjects()">Projects</button>
 						<ul id="projectsDropdown" class="dropdown-content">
 							<li><a href="./gazetteer.html">Gazetteer</a></li>
 							<li><a href="./ecommerce.html">Coffee Eccomerce</a></li>
@@ -37,7 +37,7 @@
 						</ul>
 					</div>
 					<div class="contact">
-						<button class="dropbtn" onmouseover="displayContacts()">Contact</button>
+						<button class="dropbtn" onclick="displayContacts()">Contact</button>
 						<ul id="contactsDropdown" class="dropdown-content">
 							<li><a href="tel:07432242657">07432242657</a></li>
 							<li>
@@ -61,19 +61,24 @@
 							transferring state around the app was integral to improving the user experience,
 							compared to the official Reddit website. Below is an example of the responsiveness.
 						</p>
-						<video controls autoplay>
-							<source src="./assets/video/reddit-responsive-design.mp4" type="video/mp4" />
-							Your browser does not support this video
-						</video>
+						<iframe
+							src="https://www.youtube.com/embed/iB21yBQxjis"
+							title="YouTube video player"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+						></iframe>
 						<p>
 							The app leans heavily on the use of states in React. For example, when a user searches
 							the app, the text is quickly transferred around the app. This was where the challenged
 							lied, balancing states and Lifecyle events without slowing the user down.
 						</p>
-						<video controls autoplay>
-							<source src="./assets/video/reddit-search.mp4" type="video/mp4" />
-							Your browser does not support this video
-						</video>
+						<iframe
+							src="https://www.youtube.com/embed/Yp5bT9nMNJo"
+							title="YouTube video player"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						></iframe>
 						<p>
 							As you can see, the design is very minimal, delivering only what the user really wants
 							to see.
